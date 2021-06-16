@@ -1,0 +1,10 @@
+[Unit]
+Description=MoonModem daemon
+
+[Service]
+WorkingDirectory=/opt/moonmodem
+ExecStart=/usr/bin/lua moonmodem.lua
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
